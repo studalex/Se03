@@ -1,5 +1,6 @@
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import static java.lang.System.*;
 
 public class CrazyLogger {
 
@@ -25,7 +26,7 @@ public class CrazyLogger {
     }
 
     public void showAllMessage() {
-        System.out.println(logger);
+        out.println(logger);
     }
 
     public void searchMessagesByKeyword(String keyword) {
@@ -55,10 +56,10 @@ public class CrazyLogger {
         }
 
         if (result.length() == 0) {
-            System.out.println("Поиск не дал результатов");
+            out.println("Поиск по ключевому слову ("+keyword+") не дал результатов");
         } else {
-            System.out.println("Результаты по вашему запросу:");
-            System.out.println(result);
+            out.println("Результаты по вашему запросу:("+keyword+")");
+            out.println(result);
         }
     }
 }
